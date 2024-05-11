@@ -1,0 +1,94 @@
+-- READ
+
+-- Select all rows
+-- SELECT * FROM doctors
+
+-- Select specific columns
+-- SELECT first_name, last_name  
+-- FROM doctors
+
+-- Select with a filter
+
+--   Select one specific row
+-- SELECT *
+-- FROM doctors
+-- WHERE id = 2
+
+--   Select a collection of rows
+-- SELECT *
+-- FROM doctors
+-- WHERE id = 1 OR id = 2
+
+-- SELECT last_name, first_name   
+-- FROM doctors
+-- WHERE age > 30
+
+--   LIKE
+-- SELECT *
+-- FROM doctors
+-- WHERE last_name LIKE 'Apg%'
+
+-- Order results
+--   Read all doctors ordered by last name
+
+-- SELECT *
+-- FROM doctors
+-- ORDER BY last_name DESC
+
+-- Advanced SELECT
+
+--   Count all doctors
+-- SELECT COUNT(*)
+-- FROM doctors
+
+--   Count chemistry doctors
+-- SELECT COUNT(*)
+-- FROM doctors
+-- WHERE specialty = 'Chemistry'
+
+--   Count all doctors per specialty
+--SELECT COUNT(id) AS doctor_count, *
+-- FROM doctors
+-- GROUP BY specialty 
+
+--   Count all doctors per specialty, ordered by count
+-- SELECT COUNT(id) AS doctor_count, *
+-- FROM doctors
+-- GROUP BY specialty
+-- ORDER BY doctor_count
+
+-- Joining tables
+--   Read all the appointments with doctors infos
+-- SELECT *
+-- FROM appointments
+-- JOIN doctors ON appointments.doctor_id = doctors.id
+
+--   Read all patients first & last names along with their appointment dates
+--   Read Rosalind Franklin’s appointments dates along with her patients full name
+
+
+-- CREATE
+-- INSERT INTO doctors (first_name, last_name, age, specialty)
+-- VALUES ('Chika', 'Sakai', 21, 'dentist')
+
+-- UPDATE
+-- UPDATE doctors 
+-- SET first_name = 'Super Chika'
+-- WHERE id = 8 OR id = 7
+
+-- DELETE
+-- DELETE FROM doctors
+-- WHERE id = 8
+
+
+
+-- SQL inj
+INSERT INTO doctors (first_name, last_name)
+VALUES ('Chika', ''); DELETE FROM doctors; --')
+
+
+
+
+Chika
+'); DELETE FROM doctors; --
+
